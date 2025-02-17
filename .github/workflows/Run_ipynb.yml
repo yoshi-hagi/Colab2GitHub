@@ -26,4 +26,4 @@ jobs:
       
       - name: Execute Notebook
         run: |
-          papermill path/to/your_notebook.ipynb output.ipynb
+          papermill GitHub_Test.ipynb output.ipynb
