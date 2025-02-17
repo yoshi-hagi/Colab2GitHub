@@ -1,0 +1,29 @@
+name: Execute Notebook
+
+on:
+  push:
+    branches:
+      - main
+  # またはスケジュール実行
+  # schedule:
+  #   - cron: '0 0 * * *'
+
+jobs:
+  run-notebook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+      
+      - name: Install dependencies
+        run: |
+          pip install jupyter
+          pip install papermill
+      
+      - name: Execute Notebook
+        run: |
+          papermill path/to/your_notebook.ipynb output.ipynb
