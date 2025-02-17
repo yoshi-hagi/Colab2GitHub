@@ -26,4 +26,4 @@ jobs:
       
       - name: Execute Notebook
         run: |
-          papermill GitHub_Test.ipynb output.ipynb
+          papermill --log-output GitHub_Test.ipynb output.ipynb
