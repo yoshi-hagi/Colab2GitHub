@@ -22,6 +22,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install jupyter
+          pip install pandas
+          pip install yfinance
           pip install papermill
       
       - name: Execute Notebook
