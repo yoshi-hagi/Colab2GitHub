@@ -29,3 +29,9 @@ jobs:
       - name: Execute Notebook
         run: |
           papermill --log-output GitHub_Test.ipynb output.ipynb
+      # アーティファクトのアップロード
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fr-Artifact
+          path: Artifact**
